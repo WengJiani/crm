@@ -138,7 +138,7 @@ $(function () {
             handGroup(index);
             initIndex = index;
         })
-    })
+    });
 
     //控制默认的iframe的src
     $plan.add(power=>{
@@ -146,13 +146,13 @@ $(function () {
         if(power.includes('customerall')){
             $('.iframeBox').attr('src',url)
         }
-    })
+    });
 
 
     async function init() {
         //判断当前用户有没有登录
         let result = await axios.get('/user/login');
-        console.log(result)
+        // console.log(result)
 
         if (result.code !== 0){
             alert('你还没有登录，请先登录')
